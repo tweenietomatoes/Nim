@@ -1,0 +1,6 @@
+SecureHash	sha1.html#SecureHash	sha1: SecureHash	
+secureHash	sha1.html#secureHash,string	sha1: secureHash(str: string): SecureHash	
+secureHashFile	sha1.html#secureHashFile,string	sha1: secureHashFile(filename: string): SecureHash	
+`$`	sha1.html#$,SecureHash	sha1: `$`(self: SecureHash): string	
+parseSecureHash	sha1.html#parseSecureHash,string	sha1: parseSecureHash(hash: string): SecureHash	
+`==`	sha1.html#==,SecureHash,SecureHash	sha1: `==`(a, b: SecureHash): bool	

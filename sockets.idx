@@ -1,0 +1,100 @@
+BufferSize	sockets.html#BufferSize	sockets: BufferSize	
+Socket	sockets.html#Socket	sockets: Socket	
+Port	sockets.html#Port	sockets: Port	
+AF_UNIX	sockets.html#AF_UNIX	Domain.AF_UNIX	
+AF_INET	sockets.html#AF_INET	Domain.AF_INET	
+AF_INET6	sockets.html#AF_INET6	Domain.AF_INET6	
+Domain	sockets.html#Domain	sockets: Domain	
+SOCK_STREAM	sockets.html#SOCK_STREAM	SockType.SOCK_STREAM	
+SOCK_DGRAM	sockets.html#SOCK_DGRAM	SockType.SOCK_DGRAM	
+SOCK_RAW	sockets.html#SOCK_RAW	SockType.SOCK_RAW	
+SOCK_SEQPACKET	sockets.html#SOCK_SEQPACKET	SockType.SOCK_SEQPACKET	
+SockType	sockets.html#SockType	sockets: SockType	
+IPPROTO_TCP	sockets.html#IPPROTO_TCP	Protocol.IPPROTO_TCP	
+IPPROTO_UDP	sockets.html#IPPROTO_UDP	Protocol.IPPROTO_UDP	
+IPPROTO_IP	sockets.html#IPPROTO_IP	Protocol.IPPROTO_IP	
+IPPROTO_IPV6	sockets.html#IPPROTO_IPV6	Protocol.IPPROTO_IPV6	
+IPPROTO_RAW	sockets.html#IPPROTO_RAW	Protocol.IPPROTO_RAW	
+IPPROTO_ICMP	sockets.html#IPPROTO_ICMP	Protocol.IPPROTO_ICMP	
+Protocol	sockets.html#Protocol	sockets: Protocol	
+Servent	sockets.html#Servent	sockets: Servent	
+Hostent	sockets.html#Hostent	sockets: Hostent	
+OptAcceptConn	sockets.html#OptAcceptConn	SOBool.OptAcceptConn	
+OptBroadcast	sockets.html#OptBroadcast	SOBool.OptBroadcast	
+OptDebug	sockets.html#OptDebug	SOBool.OptDebug	
+OptDontRoute	sockets.html#OptDontRoute	SOBool.OptDontRoute	
+OptKeepAlive	sockets.html#OptKeepAlive	SOBool.OptKeepAlive	
+OptOOBInline	sockets.html#OptOOBInline	SOBool.OptOOBInline	
+OptReuseAddr	sockets.html#OptReuseAddr	SOBool.OptReuseAddr	
+SOBool	sockets.html#SOBool	sockets: SOBool	
+RecvFullLine	sockets.html#RecvFullLine	RecvLineResult.RecvFullLine	
+RecvPartialLine	sockets.html#RecvPartialLine	RecvLineResult.RecvPartialLine	
+RecvDisconnected	sockets.html#RecvDisconnected	RecvLineResult.RecvDisconnected	
+RecvFail	sockets.html#RecvFail	RecvLineResult.RecvFail	
+RecvLineResult	sockets.html#RecvLineResult	sockets: RecvLineResult	
+ReadFullLine	sockets.html#ReadFullLine	ReadLineResult.ReadFullLine	
+ReadPartialLine	sockets.html#ReadPartialLine	ReadLineResult.ReadPartialLine	
+ReadDisconnected	sockets.html#ReadDisconnected	ReadLineResult.ReadDisconnected	
+ReadNone	sockets.html#ReadNone	ReadLineResult.ReadNone	
+ReadLineResult	sockets.html#ReadLineResult	sockets: ReadLineResult	
+TimeoutError	sockets.html#TimeoutError	sockets: TimeoutError	
+invalidSocket	sockets.html#invalidSocket	sockets: invalidSocket	
+`==`	sockets.html#==,Port,Port	sockets: `==`(a, b: Port): bool	
+`$`	sockets.html#$,Port	sockets: `$`(p: Port): string	
+ntohl	sockets.html#ntohl,int32	sockets: ntohl(x: int32): int32	
+ntohs	sockets.html#ntohs,int16	sockets: ntohs(x: int16): int16	
+htonl	sockets.html#htonl,int32	sockets: htonl(x: int32): int32	
+htons	sockets.html#htons,int16	sockets: htons(x: int16): int16	
+socket	sockets.html#socket,Domain,SockType,Protocol	sockets: socket(domain: Domain = AF_INET; typ: SockType = SOCK_STREAM;\n       protocol: Protocol = IPPROTO_TCP; buffered = true): Socket	
+raiseSocketError	sockets.html#raiseSocketError,Socket,int	sockets: raiseSocketError(socket: Socket; err: int = -1; async = false)	
+listen	sockets.html#listen,Socket	sockets: listen(socket: Socket; backlog = SOMAXCONN)	
+inet_ntoa	sockets.html#inet-ntoa_1	Module sockets	
+parseIp4	sockets.html#parseIp4,string	sockets: parseIp4(s: string): BiggestInt	
+bindAddr	sockets.html#bindAddr,Socket,string	sockets: bindAddr(socket: Socket; port = Port(0); address = &quot;&quot;)	
+getSockName	sockets.html#getSockName,Socket	sockets: getSockName(socket: Socket): Port	
+acceptAddr	sockets.html#acceptAddr,Socket,Socket,string	sockets: acceptAddr(server: Socket; client: var Socket; address: var string)	
+accept	sockets.html#accept,Socket,Socket	sockets: accept(server: Socket; client: var Socket)	
+acceptAddr	sockets.html#acceptAddr,Socket	sockets: acceptAddr(server: Socket): tuple[client: Socket, address: string]	
+accept	sockets.html#accept,Socket	sockets: accept(server: Socket): Socket	
+close	sockets.html#close,Socket	sockets: close(socket: Socket)	
+getServByName	sockets.html#getServByName,string,string	sockets: getServByName(name, proto: string): Servent	
+getServByPort	sockets.html#getServByPort,Port,string	sockets: getServByPort(port: Port; proto: string): Servent	
+getHostByAddr	sockets.html#getHostByAddr,string	sockets: getHostByAddr(ip: string): Hostent	
+getHostByName	sockets.html#getHostByName,string	sockets: getHostByName(name: string): Hostent	
+getSockOptInt	sockets.html#getSockOptInt,Socket,int,int	sockets: getSockOptInt(socket: Socket; level, optname: int): int	
+setSockOptInt	sockets.html#setSockOptInt,Socket,int,int,int	sockets: setSockOptInt(socket: Socket; level, optname, optval: int)	
+getSockOpt	sockets.html#getSockOpt,Socket,SOBool	sockets: getSockOpt(socket: Socket; opt: SOBool; level = SOL_SOCKET): bool	
+setSockOpt	sockets.html#setSockOpt,Socket,SOBool,bool	sockets: setSockOpt(socket: Socket; opt: SOBool; value: bool; level = SOL_SOCKET)	
+connect	sockets.html#connect,Socket,string,Domain	sockets: connect(socket: Socket; address: string; port = Port(0); af: Domain = AF_INET)	
+connectAsync	sockets.html#connectAsync,Socket,string,Domain	sockets: connectAsync(socket: Socket; name: string; port = Port(0); af: Domain = AF_INET)	
+hasDataBuffered	sockets.html#hasDataBuffered,Socket	sockets: hasDataBuffered(s: Socket): bool	
+select	sockets.html#select,seq[Socket],seq[Socket],seq[Socket],int	sockets: select(readfds, writefds, exceptfds: var seq[Socket]; timeout = 500): int	
+select	sockets.html#select,seq[Socket],seq[Socket],int	sockets: select(readfds, writefds: var seq[Socket]; timeout = 500): int	
+selectWrite	sockets.html#selectWrite,seq[Socket],int	sockets: selectWrite(writefds: var seq[Socket]; timeout = 500): int	
+select	sockets.html#select,seq[Socket],int	sockets: select(readfds: var seq[Socket]; timeout = 500): int	
+recv	sockets.html#recv,Socket,pointer,int	sockets: recv(socket: Socket; data: pointer; size: int): int	
+recv	sockets.html#recv,Socket,pointer,int,int	sockets: recv(socket: Socket; data: pointer; size: int; timeout: int): int	
+recv	sockets.html#recv,Socket,string,int	sockets: recv(socket: Socket; data: var string; size: int; timeout = -1): int	
+recvAsync	sockets.html#recvAsync,Socket,string,int	sockets: recvAsync(socket: Socket; data: var string; size: int): int	
+recvLine	sockets.html#recvLine,Socket,TaintedString	sockets: recvLine(socket: Socket; line: var TaintedString; timeout = -1): bool	
+readLine	sockets.html#readLine,Socket,TaintedString	sockets: readLine(socket: Socket; line: var TaintedString; timeout = -1)	
+recvLineAsync	sockets.html#recvLineAsync,Socket,TaintedString	sockets: recvLineAsync(socket: Socket; line: var TaintedString): RecvLineResult	
+readLineAsync	sockets.html#readLineAsync,Socket,TaintedString	sockets: readLineAsync(socket: Socket; line: var TaintedString): ReadLineResult	
+recv	sockets.html#recv,Socket	sockets: recv(socket: Socket): TaintedString	
+recvTimeout	sockets.html#recvTimeout,Socket,int	sockets: recvTimeout(socket: Socket; timeout: int): TaintedString	
+recvAsync	sockets.html#recvAsync,Socket,TaintedString	sockets: recvAsync(socket: Socket; s: var TaintedString): bool	
+recvFrom	sockets.html#recvFrom,Socket,string,int,string,Port,int32	sockets: recvFrom(socket: Socket; data: var string; length: int; address: var string;\n         port: var Port; flags = 0&#x27;i32): int	
+recvFromAsync	sockets.html#recvFromAsync,Socket,string,int,string,Port,int32	sockets: recvFromAsync(socket: Socket; data: var string; length: int; address: var string;\n              port: var Port; flags = 0&#x27;i32): bool	
+skip	sockets.html#skip,Socket	sockets: skip(socket: Socket)	
+skip	sockets.html#skip,Socket,int	sockets: skip(socket: Socket; size: int; timeout = -1)	
+send	sockets.html#send,Socket,pointer,int	sockets: send(socket: Socket; data: pointer; size: int): int	
+send	sockets.html#send,Socket,string	sockets: send(socket: Socket; data: string)	
+sendAsync	sockets.html#sendAsync,Socket,string	sockets: sendAsync(socket: Socket; data: string): int	
+trySend	sockets.html#trySend,Socket,string	sockets: trySend(socket: Socket; data: string): bool	
+sendTo	sockets.html#sendTo,Socket,string,Port,pointer,int,Domain,int32	sockets: sendTo(socket: Socket; address: string; port: Port; data: pointer; size: int;\n       af: Domain = AF_INET; flags = 0&#x27;i32): int	
+sendTo	sockets.html#sendTo,Socket,string,Port,string	sockets: sendTo(socket: Socket; address: string; port: Port; data: string): int	
+setBlocking	sockets.html#setBlocking,Socket,bool	sockets: setBlocking(s: Socket; blocking: bool)	
+connect	sockets.html#connect,Socket,string,int,Domain	sockets: connect(socket: Socket; address: string; port = Port(0); timeout: int;\n        af: Domain = AF_INET)	
+isSSL	sockets.html#isSSL,Socket	sockets: isSSL(socket: Socket): bool	
+getFD	sockets.html#getFD,Socket	sockets: getFD(socket: Socket): SocketHandle	
+isBlocking	sockets.html#isBlocking,Socket	sockets: isBlocking(socket: Socket): bool	

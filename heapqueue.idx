@@ -1,0 +1,10 @@
+HeapQueue	heapqueue.html#HeapQueue	heapqueue: HeapQueue	
+newHeapQueue	heapqueue.html#newHeapQueue,	heapqueue: newHeapQueue[T](): HeapQueue[T]	
+newHeapQueue	heapqueue.html#newHeapQueue,HeapQueue[T]	heapqueue: newHeapQueue[T](h: var HeapQueue[T])	
+len	heapqueue.html#len,HeapQueue[T]	heapqueue: len[T](h: HeapQueue[T]): int	
+`[]`	heapqueue.html#[],HeapQueue[T],int	heapqueue: `[]`[T](h: HeapQueue[T]; i: int): T	
+push	heapqueue.html#push,HeapQueue[T],T	heapqueue: push[T](heap: var HeapQueue[T]; item: T)	
+pop	heapqueue.html#pop,HeapQueue[T]	heapqueue: pop[T](heap: var HeapQueue[T]): T	
+del	heapqueue.html#del,HeapQueue[T],int	heapqueue: del[T](heap: var HeapQueue[T]; index: int)	
+replace	heapqueue.html#replace,HeapQueue[T],T	heapqueue: replace[T](heap: var HeapQueue[T]; item: T): T	
+pushpop	heapqueue.html#pushpop,HeapQueue[T],T	heapqueue: pushpop[T](heap: var HeapQueue[T]; item: T): T	

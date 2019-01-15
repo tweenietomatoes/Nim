@@ -1,0 +1,16 @@
+interpolation	strformat.html#interpolation_1	Module strformat	
+format	strformat.html#format_1	Module strformat	
+fmt vs. &amp;	strformat.html#fmt-vsdot-amp	 <tt class="docutils literal"><span class="pre">fmt</span></tt> vs. <tt class="docutils literal"><span class="pre">&amp;</span></tt>	
+Formatting strings	strformat.html#formatting-strings	 Formatting strings	
+Formatting floats	strformat.html#formatting-floats	 Formatting floats	
+Implementation details	strformat.html#implementation-details	 Implementation details	
+Standard format specifier for strings, integers and floats	strformat.html#standard-format-specifier-for-strings-integers-and-floats	 Standard format specifier for strings, integers and floats	
+Future directions	strformat.html#future-directions	 Future directions	
+`&amp;`	strformat.html#&.m,string	strformat: `&amp;`(pattern: string): untyped	
+fmt	strformat.html#fmt.t,string	strformat: fmt(pattern: string): untyped	
+alignString	strformat.html#alignString,string,int,Char,Char	strformat: alignString(s: string; minimumWidth: int; align = &#x27;\x00&#x27;; fill = &#x27; &#x27;): string	
+StandardFormatSpecifier	strformat.html#StandardFormatSpecifier	strformat: StandardFormatSpecifier	
+parseStandardFormatSpecifier	strformat.html#parseStandardFormatSpecifier,string,int	strformat: parseStandardFormatSpecifier(s: string; start = 0; ignoreUnknownSuffix = false): StandardFormatSpecifier	
+format	strformat.html#format,SomeInteger,string,string	strformat: format(value: SomeInteger; specifier: string; res: var string)	
+format	strformat.html#format,SomeFloat,string,string	strformat: format(value: SomeFloat; specifier: string; res: var string)	
+format	strformat.html#format,string,string,string	strformat: format(value: string; specifier: string; res: var string)	
